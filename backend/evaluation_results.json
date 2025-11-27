@@ -1,0 +1,325 @@
+{
+  "timestamp": "2025-11-25T19:04:34.789116",
+  "model_path": "./model",
+  "data_path": "./menstrual_data.csv",
+  "test_size": 4461,
+  "retrieval_samples": 500,
+  "generation_samples": 100,
+  "device": "cpu",
+  "rag_retrieval": {
+    "top_1": {
+      "precision": 0.052,
+      "recall": 0.052,
+      "mrr": 0.052,
+      "context_relevance": 0.6260622071325779,
+      "num_samples": 500
+    },
+    "top_3": {
+      "precision": 0.182,
+      "recall": 0.182,
+      "mrr": 0.10566666666666666,
+      "context_relevance": 0.6321574684977531,
+      "num_samples": 500
+    },
+    "top_5": {
+      "precision": 0.318,
+      "recall": 0.318,
+      "mrr": 0.13626666666666665,
+      "context_relevance": 0.6337780376821757,
+      "num_samples": 500
+    },
+    "top_10": {
+      "precision": 0.526,
+      "recall": 0.526,
+      "mrr": 0.16441190476190473,
+      "context_relevance": 0.6348466998040676,
+      "num_samples": 500
+    }
+  },
+  "model_with_rag": {
+    "bleu": 0.3278790863249633,
+    "rouge1": 0.4739501472898774,
+    "rouge2": 0.38961260260600555,
+    "rougeL": 0.4423706976330975,
+    "meteor": 0.5077213547744508,
+    "semantic_similarity": 0.7780235002934933,
+    "std_bleu": 0.37318542991701337,
+    "std_rouge1": 0.32283633023558383,
+    "std_rouge2": 0.36690395357642624,
+    "std_rougeL": 0.33531099827374916,
+    "std_meteor": 0.32524987131468747,
+    "std_semantic": 0.20494187952182788,
+    "num_samples": 100,
+    "detailed_results": [
+      {
+        "query": "Is it correct that the free napkins from the government are uncomfortable and have poor quality?",
+        "reference": "That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs.",
+        "candidate": "Yes! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs. That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs. That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs. That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs. That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs. That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs. That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs.",
+        "bleu": 0.13991645348957105,
+        "rouge1": 0.25236593059936907,
+        "rouge2": 0.2476190476190476,
+        "rougeL": 0.25236593059936907,
+        "meteor": 0.6277332785920975,
+        "semantic_similarity": 0.8725473284721375
+      },
+      {
+        "query": "Is it true that my wife cannot participate in community events while she is menstruating?",
+        "reference": "No, this is not true. You can participate in community events and social gatherings during your periods. This restriction is a part of old taboos that don't hold up under scientific scrutiny. Your menstruation is a natural process and should not prevent you from engaging in community activities. It's important to live your life freely and participate in the events that matter to you.",
+        "candidate": "No, this is not true. You can participate in community events and social gatherings during your periods. This restriction is a part of old taboos that don't hold up under scientific scrutiny. Your menstruation is a natural process and should not prevent you from engaging in community activities. It's important to live your life freely and participate in the events that matter to you.",
+        "bleu": 1.0,
+        "rouge1": 1.0,
+        "rouge2": 1.0,
+        "rougeL": 1.0,
+        "meteor": 0.9999986604080933,
+        "semantic_similarity": 1.0000001192092896
+      },
+      {
+        "query": "I am not aware of the concept of period, can you please explain it to me?",
+        "reference": "A period is the regular bleeding a woman has each month. It's a sign your body is getting ready for pregnancy.",
+        "candidate": "A period, also known as menstruation, is a natural process in which the lining of the uterus is shed through vaginal bleeding. It is a normal part of the menstrual cycle in reproductive-age females.",
+        "bleu": 0.018772266185346033,
+        "rouge1": 0.31578947368421045,
+        "rouge2": 0.036363636363636355,
+        "rougeL": 0.2456140350877193,
+        "meteor": 0.3144725710939024,
+        "semantic_similarity": 0.7702471017837524
+      },
+      {
+        "query": "My periods have been really heavy this month and it's affecting my day-to-day life. What should I do?",
+        "reference": "If you find yourself having to change your pad or cloth very often because of a heavy period, it's a good idea to talk to a health worker or doctor. They can check if everything is okay and suggest ways to help, like taking certain medicines or using different methods to manage your period.",
+        "candidate": "Talk to a health worker or doctor if you experience heavy periods. Track your period with a calendar or app. Use a calendar or app to track your period.",
+        "bleu": 0.11580426678307755,
+        "rouge1": 0.47619047619047616,
+        "rouge2": 0.21951219512195122,
+        "rougeL": 0.30952380952380953,
+        "meteor": 0.26490685965092553,
+        "semantic_similarity": 0.696111798286438
+      },
+      {
+        "query": "What triggers menstruation in the menstrual cycle?",
+        "reference": "Menstruation is triggered by a drop in progesterone levels if fertilization and implantation of an egg do not occur. This drop in hormone levels causes the uterine lining to shed, resulting in menstrual bleeding.",
+        "candidate": "Menstruation is triggered by a drop in progesterone levels if fertilization and implantation of an egg do not occur. This drop in hormone levels causes the uterine lining to shed, resulting in menstrual bleeding.",
+        "bleu": 1.0,
+        "rouge1": 1.0,
+        "rouge2": 1.0,
+        "rougeL": 1.0,
+        "meteor": 0.9999901289163524,
+        "semantic_similarity": 1.0
+      },
+      {
+        "query": "What are some ways to help my wife feel better and boost her morale during periods?",
+        "reference": "You can boost her confidence by offering sincere compliments and expressions of appreciation for her strengths and qualities. Show your support by engaging in activities she enjoys and reminding her of her worth and value to you.",
+        "candidate": "Engage in activities she enjoys and reminds her of her worth and value to you. Offer practical help with tasks or errands, or simply provide emotional support by being there for her and offering a listening ear. Offer to take on extra responsibilities around the house or with the children to give her a chance to rest and recharge.",
+        "bleu": 0.206031267155219,
+        "rouge1": 0.4791666666666667,
+        "rouge2": 0.3404255319148936,
+        "rougeL": 0.31249999999999994,
+        "meteor": 0.4492753623188406,
+        "semantic_similarity": 0.5386360287666321
+      },
+      {
+        "query": "People in my village believe that a menstrual cycle should last 28 days, is this true?",
+        "reference": "A typical menstrual cycle lasts around 28 days, but it can range from 21 to 35 days.",
+        "candidate": "Yes, a healthy menstrual cycle is defined as having menstrual cycles lasting 21â€“35 days, a menstrual cycle variation of 5â€“7 days yearly, menstrual flow during 2â€“7 days, and bleeding between 25â€“80 ml per menstruation.",
+        "bleu": 0.015387660309188695,
+        "rouge1": 0.2909090909090909,
+        "rouge2": 0.11320754716981132,
+        "rougeL": 0.2545454545454545,
+        "meteor": 0.20642201834862384,
+        "semantic_similarity": 0.7410465478897095
+      },
+      {
+        "query": "In my village there are no medicines available for PMS, how can I cope with it?",
+        "reference": "You can manage PMS symptoms with some simple changes in your daily life. Getting enough sleep is very important. It can help your body and mind rest and recover. Regular exercise, like walking or yoga, can also make you feel better by relieving stress and improving your mood. Eating healthy foods, especially lots of vegetables, fruits, and whole grains, and reducing caffeine, sugar, and alcohol, can also help reduce PMS symptoms. These steps can make a big difference in how...",
+        "candidate": "Talk to a doctor or nurse if your PMS symptoms are troubling. Talk to a doctor or nurse if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk to a doctor if your PMS symptoms are troubling. Talk",
+        "bleu": 0.001984803648723955,
+        "rouge1": 0.043373493975903614,
+        "rouge2": 0.009685230024213076,
+        "rougeL": 0.038554216867469876,
+        "meteor": 0.07842875498523204,
+        "semantic_similarity": 0.5944241285324097
+      },
+      {
+        "query": "Every month I feel really irritable and moody. Is this related to my periods?",
+        "reference": "There's no single test, but doctors diagnose PMS based on symptoms. Track your period and symptoms in a calendar or app for a few months. Look for patterns like symptoms appearing in the week before your period and disappearing within a few days after it starts.",
+        "candidate": "Yes, PMS can also cause emotional and mental changes, like: Feeling irritable or easily angered Feeling tired or having trouble sleeping Changes in appetite or cravings for certain foods Difficulty concentrating or remembering things Feeling anxious or tense Feeling down, sad, or crying easily Mood swings Less interest in sex",
+        "bleu": 0.0055913101225260695,
+        "rouge1": 0.1443298969072165,
+        "rouge2": 0.0,
+        "rougeL": 0.12371134020618556,
+        "meteor": 0.08754863813229573,
+        "semantic_similarity": 0.6073204874992371
+      },
+      {
+        "query": "Are there any medications available to deal with PMS?",
+        "reference": "Management of PMS may involve lifestyle changes (such as regular exercise, healthy diet, stress reduction techniques), over-the-counter pain relievers, hormonal birth control, and medications to alleviate specific symptoms like mood swings or bloating.",
+        "candidate": "Yes, pain relievers or birth control pills can help manage symptoms like mood swings or bloating.",
+        "bleu": 0.11204959784086632,
+        "rouge1": 0.43137254901960786,
+        "rouge2": 0.28571428571428564,
+        "rougeL": 0.392156862745098,
+        "meteor": 0.3263611760928397,
+        "semantic_similarity": 0.6284842491149902
+      }
+    ]
+  },
+  "model_without_rag": {
+    "bleu": 0.019005666653632534,
+    "rouge1": 0.17507254195592062,
+    "rouge2": 0.046128791991357776,
+    "rougeL": 0.1394210624314234,
+    "meteor": 0.1521748800408423,
+    "semantic_similarity": 0.5506417006254196,
+    "std_bleu": 0.02480105937069982,
+    "std_rouge1": 0.13241613268565194,
+    "std_rouge2": 0.058983242179797286,
+    "std_rougeL": 0.10295723281662339,
+    "std_meteor": 0.08537274059071882,
+    "std_semantic": 0.19805599745493213,
+    "num_samples": 100,
+    "detailed_results": [
+      {
+        "query": "Is it correct that the free napkins from the government are uncomfortable and have poor quality?",
+        "reference": "That's a myth! The MHS program provides good quality sanitary napkins at a subsidized price. You can always ask the ASHA about the brand or type of pads available under the program to see if they suit your needs.",
+        "candidate": "Yes, free napkins can be harmful to your health, especially if you're pregnant or breastfeeding. However, it's important to consult a healthcare provider if you're concerned about the quality of your napkins. It's important to consult a healthcare provider if you're concerned about the quality of your napkins. You can also consult a healthcare provider if you're concerned about the quality of your napkins.",
+        "bleu": 0.020192919540301363,
+        "rouge1": 0.30909090909090914,
+        "rouge2": 0.037037037037037035,
+        "rougeL": 0.21818181818181817,
+        "meteor": 0.20474137931034483,
+        "semantic_similarity": 0.5554459691047668
+      },
+      {
+        "query": "Is it true that my wife cannot participate in community events while she is menstruating?",
+        "reference": "No, this is not true. You can participate in community events and social gatherings during your periods. This restriction is a part of old taboos that don't hold up under scientific scrutiny. Your menstruation is a natural process and should not prevent you from engaging in community activities. It's important to live your life freely and participate in the events that matter to you.",
+        "candidate": "Yes, there's no reason to participate in community events while you're menstruating. It's a natural part of being a member of a community. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of",
+        "bleu": 0.011949400702220746,
+        "rouge1": 0.0774818401937046,
+        "rouge2": 0.029197080291970802,
+        "rougeL": 0.05811138014527845,
+        "meteor": 0.15989364213469678,
+        "semantic_similarity": 0.6103377342224121
+      },
+      {
+        "query": "I am not aware of the concept of period, can you please explain it to me?",
+        "reference": "A period is the regular bleeding a woman has each month. It's a sign your body is getting ready for pregnancy.",
+        "candidate": "Periods are a natural part of menstruation, and it's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural part of being a woman. It's a natural",
+        "bleu": 0.00741399546771143,
+        "rouge1": 0.03814713896457765,
+        "rouge2": 0.016438356164383564,
+        "rougeL": 0.0326975476839237,
+        "meteor": 0.12799109627156371,
+        "semantic_similarity": 0.5340151786804199
+      },
+      {
+        "query": "My periods have been really heavy this month and it's affecting my day-to-day life. What should I do?",
+        "reference": "If you find yourself having to change your pad or cloth very often because of a heavy period, it's a good idea to talk to a health worker or doctor. They can check if everything is okay and suggest ways to help, like taking certain medicines or using different methods to manage your period.",
+        "candidate": "Menstrual cramps can affect your day-to-day life, so it's important to talk to a doctor or healthcare professional about your symptoms. They can help you understand what's going on in your body and understand what's going on in your body.",
+        "bleu": 0.07189157299301496,
+        "rouge1": 0.32,
+        "rouge2": 0.10204081632653061,
+        "rougeL": 0.23999999999999996,
+        "meteor": 0.20240922609495693,
+        "semantic_similarity": 0.5010291337966919
+      },
+      {
+        "query": "What triggers menstruation in the menstrual cycle?",
+        "reference": "Menstruation is triggered by a drop in progesterone levels if fertilization and implantation of an egg do not occur. This drop in hormone levels causes the uterine lining to shed, resulting in menstrual bleeding.",
+        "candidate": "The menstrual cycle is characterized by a lack of menstrual hormones (hormones) and a lack of menstrual hormones (hormones).",
+        "bleu": 0.013768428989882077,
+        "rouge1": 0.3018867924528302,
+        "rouge2": 0.0392156862745098,
+        "rougeL": 0.22641509433962262,
+        "meteor": 0.12605042016806725,
+        "semantic_similarity": 0.6594986319541931
+      },
+      {
+        "query": "What are some ways to help my wife feel better and boost her morale during periods?",
+        "reference": "You can boost her confidence by offering sincere compliments and expressions of appreciation for her strengths and qualities. Show your support by engaging in activities she enjoys and reminding her of her worth and value to you.",
+        "candidate": "It's important to remember that menstruation is a natural part of life, and it's important to remember that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life. It's important to remember that menstruation is a natural part of life, and that menstruation is a natural part of life",
+        "bleu": 0.000794860157065025,
+        "rouge1": 0.03526448362720404,
+        "rouge2": 0.0,
+        "rougeL": 0.03526448362720404,
+        "meteor": 0.06081081081081082,
+        "semantic_similarity": 0.10843823850154877
+      },
+      {
+        "query": "People in my village believe that a menstrual cycle should last 28 days, is this true?",
+        "reference": "A typical menstrual cycle lasts around 28 days, but it can range from 21 to 35 days.",
+        "candidate": "Yes, menstrual cycles can last for up to 28 days, but it's important to remember that it's a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that it's a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that it's a natural part of life. It's important to remember that menstruation is a natural part of life, and it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life, and that it's important to remember that it's a natural part of life",
+        "bleu": 0.009472908764983752,
+        "rouge1": 0.04914004914004914,
+        "rouge2": 0.019753086419753086,
+        "rougeL": 0.03931203931203932,
+        "meteor": 0.12548422146636434,
+        "semantic_similarity": 0.5156806111335754
+      },
+      {
+        "query": "In my village there are no medicines available for PMS, how can I cope with it?",
+        "reference": "You can manage PMS symptoms with some simple changes in your daily life. Getting enough sleep is very important. It can help your body and mind rest and recover. Regular exercise, like walking or yoga, can also make you feel better by relieving stress and improving your mood. Eating healthy foods, especially lots of vegetables, fruits, and whole grains, and reducing caffeine, sugar, and alcohol, can also help reduce PMS symptoms. These steps can make a big difference in how...",
+        "candidate": "It's important to talk to a doctor if you're concerned about PMS. You can talk to a doctor if you're concerned about PMS. You can talk to a doctor if you're concerned about PMS. You can talk to a doctor if you're concerned about PMS.",
+        "bleu": 0.005454175585361237,
+        "rouge1": 0.15384615384615385,
+        "rouge2": 0.015625,
+        "rougeL": 0.12307692307692307,
+        "meteor": 0.08250825082508251,
+        "semantic_similarity": 0.6638156771659851
+      },
+      {
+        "query": "Every month I feel really irritable and moody. Is this related to my periods?",
+        "reference": "There's no single test, but doctors diagnose PMS based on symptoms. Track your period and symptoms in a calendar or app for a few months. Look for patterns like symptoms appearing in the week before your period and disappearing within a few days after it starts.",
+        "candidate": "It's normal to feel irritable and moody during your period, but it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period. If you're worried about your period, it's important to talk to a doctor if you're worried about your period",
+        "bleu": 0.0019952236214868684,
+        "rouge1": 0.05633802816901409,
+        "rouge2": 0.009433962264150943,
+        "rougeL": 0.05164319248826291,
+        "meteor": 0.13408739776898984,
+        "semantic_similarity": 0.40585824847221375
+      },
+      {
+        "query": "Are there any medications available to deal with PMS?",
+        "reference": "Management of PMS may involve lifestyle changes (such as regular exercise, healthy diet, stress reduction techniques), over-the-counter pain relievers, hormonal birth control, and medications to alleviate specific symptoms like mood swings or bloating.",
+        "candidate": "It's important to talk to a doctor if you're concerned about PMS. You can talk to a doctor if you're concerned about PMS. You can talk to a doctor if you're worried about PMS. You can also talk to a doctor if you're worried about PMS.",
+        "bleu": 0.004375436627586616,
+        "rouge1": 0.046511627906976744,
+        "rouge2": 0.0,
+        "rougeL": 0.046511627906976744,
+        "meteor": 0.03537735849056604,
+        "semantic_similarity": 0.6700547337532043
+      }
+    ]
+  },
+  "comparison": {
+    "bleu": {
+      "with_rag": 0.3278790863249633,
+      "without_rag": 0.019005666653632534,
+      "improvement_percent": 1625.164880034851
+    },
+    "rouge1": {
+      "with_rag": 0.4739501472898774,
+      "without_rag": 0.17507254195592062,
+      "improvement_percent": 170.71643673809658
+    },
+    "rouge2": {
+      "with_rag": 0.38961260260600555,
+      "without_rag": 0.046128791991357776,
+      "improvement_percent": 744.6191321875488
+    },
+    "rougeL": {
+      "with_rag": 0.4423706976330975,
+      "without_rag": 0.1394210624314234,
+      "improvement_percent": 217.29115380302378
+    },
+    "meteor": {
+      "with_rag": 0.5077213547744508,
+      "without_rag": 0.1521748800408423,
+      "improvement_percent": 233.64334155425865
+    },
+    "semantic_similarity": {
+      "with_rag": 0.7780235002934933,
+      "without_rag": 0.5506417006254196,
+      "improvement_percent": 41.29396655026547
+    }
+  }
+}

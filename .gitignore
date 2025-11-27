@@ -1,15 +1,17 @@
-# Exclude other projects
-F2-SHW(1)/
-Kubernetes-Assignment.zip
-Kubernetes-Assignment/
-LoadBalancer/
-MENST.zip
-MENST/
-MenstBot/
-is_project - Copy/
-is_project/
-personal-portfolio/
-project1/
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
 
 # Python
 __pycache__/
@@ -17,67 +19,90 @@ __pycache__/
 *$py.class
 *.so
 .Python
-*.egg-info/
-dist/
 build/
-.venv/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
 venv/
-ENV/
 env/
-
-# Node
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-.pnpm-debug.log*
-
-# Build outputs
-dist/
-dist-ssr/
-*.local
-
-# Large model files and embeddings
-*.npy
-*.faiss
-*.safetensors
-*.bin
-*.pt
-*.pth
-model/
-embeddings*.npy
-*_index*.faiss
-
-# Data files (if too large)
-*.csv
-!package.json
-!package-lock.json
+ENV/
+env.bak/
+venv.bak/
+.venv
 
 # Environment variables
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# IDE
+# Large model files (too large for GitHub >100MB)
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.pkl
+*.pickle
+
+# Large data files (embeddings, indices)
+*.npy
+*.npz
+*.faiss
+*.index
+
+# User data / conversations
+backend/conversations/*.json
+
+# Keep important JSON config files
+!package.json
+!package-lock.json
+!tsconfig.json
+!jsconfig.json
+!eslint.config.js
+!vite.config.js
+
+# IDE / Editor
 .vscode/*
 !.vscode/extensions.json
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# Logs
-logs/
-*.log
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # OS
 Thumbs.db
-desktop.ini
+.DS_Store
 
-# Conversations (may contain sensitive data)
-conversations/*.json
+# Testing
+coverage/
+.nyc_output/
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Evaluation results
-evaluation_results.json
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
