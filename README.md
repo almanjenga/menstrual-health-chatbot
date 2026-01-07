@@ -32,88 +32,98 @@ The system combines a **fine-tuned Flan-T5 model** with a **vector-based RAG pip
 
 ## 🏗️ Project Structure
 
-is_project2_final/
-├── is_project2/
-│   ├── backend/          # Flask backend with RAG pipeline and NLP models
-│   ├── src/              # React + Next.js frontend application
-│   └── public/           # Static assets
-
-
+```
+menstrual_health_chatbot/
+├── backend/
+│ ├── model/
+│ │ ├── config.json
+│ │ ├── generation_config.json
+│ │ ├── special_tokens_map.json
+│ │ ├── tokenizer.json
+│ │ └── tokenizer_config.json
+│ ├── TRANSLATION_README.md
+│ ├── app.py
+│ ├── build_swahili_index.py
+│ ├── check_progress.py
+│ ├── complete_swahili_setup.py
+│ ├── download_model.py
+│ ├── evaluate_model_rag.py
+│ ├── evaluation_results.json
+│ ├── generate_report.py
+│ ├── menstrual_data.csv
+│ ├── menstrual_data_sw.csv
+│ ├── requirements.txt
+│ └── translation_utils.py
+├── public/
+│ └── vite.svg
+├── src/
+│ ├── assets/
+│ ├── components/
+│ ├── contexts/
+│ ├── utils/
+│ ├── App.css
+│ ├── App.jsx
+│ ├── ChatPage.jsx
+│ ├── Config.js
+│ ├── EducationPage.jsx
+│ ├── HomePage.jsx
+│ ├── Login.jsx
+│ ├── ProfilePage.jsx
+│ ├── Signup.jsx
+│ ├── TrackCyclePage.jsx
+│ ├── WelcomePage.jsx
+│ ├── index.css
+│ └── main.jsx
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+└── vite.config.js
+```
 
 ---
 
 ## 🔧 Tech Stack
 
-**Frontend**:  
+**Frontend:**  
 - React + Next.js  
 - Tailwind CSS  
 - Firebase Authentication  
 
-**Backend & NLP**:  
+**Backend & NLP:**  
 - Python (Flask)  
 - Hugging Face Transformers (Flan-T5 fine-tuned)  
 - PyTorch  
 - RAG pipeline with FAISS vector search  
 - Pandas, NLTK, Scikit-learn  
 
-**Database & Hosting**:  
+**Database & Hosting:**  
 - Firebase Firestore (for user data)
 
 ---
 
-## 🛠️ Development Workflow
+## 🎯 Objectives
 
-Branch-based workflow:
-
-- `main`: Production-ready code  
-- `frontend`: Frontend development branch  
-- `backend`: Backend development branch  
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-git clone https://github.com/your-username/your-repo-name.git
-
-cd is_project2_final/is_project2
-
-### 2. Backend setup
-
-See backend/README.md for instructions to install dependencies, set up the RAG pipeline, and run the Flask API.
-
-### 3. Frontend setup
-
-See src/README.md for instructions to install dependencies and run the React + Next.js web app.
-
-### 4. Access the application
-
-Once backend and frontend are running, open http://localhost:3000
- to interact with the chatbot.
+- Provide **accurate menstrual health information** to Kenyan youth  
+- Reduce **stigma** through culturally sensitive guidance  
+- Offer **emotionally aware, empathetic digital support**  
+- Enhance **accessibility** through English + Kiswahili support  
 
 ---
 
-### 🎯 Objectives
+## 🤝 Contributing
 
-Provide accurate menstrual health information to Kenyan youth
+Contributions are welcome! You can:  
+- Improve NLP accuracy or expand datasets  
+- Enhance Kiswahili and cultural sensitivity support  
+- Upgrade frontend UI/UX  
 
-Reduce stigma through culturally sensitive guidance
-
-Offer emotionally aware, empathetic digital support
-
-Enhance accessibility through English + Kiswahili support
+Please create a **pull request** or open an **issue** to collaborate.
 
 ---
 
-### 🤝 Contributing
+## 📝 License
 
-Contributions are welcome! You can:
-
-Improve NLP accuracy or expand datasets
-
-Enhance Kiswahili and cultural sensitivity support
-
-Upgrade frontend UI/UX
-
-Please create a pull request or open an issue to collaborate.
+This project is licensed under the **MIT License**.
